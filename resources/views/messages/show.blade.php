@@ -2,21 +2,21 @@
 
 @section('content')
 
-    <h1>{{ $message->id }}の投稿の削除</h1>
+    <h1>詳細ページ</h1>
     
-    {!! Form::model($message, ['route' => 'messages.destroy'], 'method' => 'delete') !!}
     
-        <div class="row">
-            <div class="col-xs-12">
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <form method="delete" action="delete.blade.php">
                 <div class="form-group">
-                    {!! Form::label('password', 'パスワード入力欄：') !!}
-                    {!! Form::text('password', null, ['class' => 'form-control']) !!}
+                    <label for="password">パスワード：</label>
+                    <input type="password" id="password" name="password" class="form-control" autofocus>
                 </div>
-            </div>
+            <input type="submit" value="送信" class="btn btn-success">
+            </form>
         </div>
-        {!! Form::submit('削除', ['class' => 'btn btn-warning']) !!}
-    
-    {!! Form::close() !!}
+    </div>
 
 
 @endsection

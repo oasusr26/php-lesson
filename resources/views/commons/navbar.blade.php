@@ -8,11 +8,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">掲示板＠飯店</a>
+                <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-cloud"></span>掲示板＠飯店</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>{!! link_to_route('messages.create', '新規作成') !!}</li>
+                    <li><a href="/messages/create.blade.php">新規作成</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">マイページ</a></li>
+                    <li><a href="#">ログイン</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
                 </ul>
             </div>
         </div>

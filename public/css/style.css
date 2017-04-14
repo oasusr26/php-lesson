@@ -17,6 +17,16 @@ h1 {
     border-left: 5px solid #00A5B9;
 }
 
+h2 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #00A5B9;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
 
 /* ヘッダーエリア */
 header a {
@@ -38,9 +48,15 @@ header a:hover {
     color: #fff;
 }
 
+.glyphicon-cloud {
+    padding-top: 5px;
+    padding-right: 7px;
+}
+
+
+
 /* サイドバーエリア */
 aside ul li {
-
     list-style: none;
 }
 
@@ -49,13 +65,64 @@ aside ul li a {
     list-style: none;
 }
 
+aside h2 {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
 
-/* メインエリア */
-table th, table td{
+.customer {
+    border: 3px solid #00A5B9;
+    background: #E4F3F4;
+}
+
+.user li a{
+    font-size: 15px;
+    color: #7C7D7E;
+    text-decoration: underline;
+}
+
+.user li a:hover {
+    text-decoration: none;
+}
+
+.user2 {
     text-align: center;
 }
 
 
+
+.mypage ul {
+    list-style: none;
+}
+
+.mypage {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.mypage-btn:hover {
+    opacity: 0.5;   
+}
+
+
+/* メインエリア */
+.plan-image:hover {
+    opacity: 0.5;
+}
+
+.top-plan {
+    padding-top: 10px;
+}
+
+table th, table td{
+    text-align: center;
+}
+
+.pagination {
+    width: 100%;
+    margin: 0 auto;
+}
 /* フッターエリア */
 .fnav {
     background: #F0F0F0;
