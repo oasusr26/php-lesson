@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+body {
+    font-size: 14px;
+    color: #333333;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    padding-left:7px;
+    border-left: 5px solid #00A5B9;
+}
+
+
+/* ヘッダーエリア */
+header a {
+    color: #fff !important;
+}
+
+header a:hover {
+    color: #4FC1CF !important;
+}
+
+
+
+/* グローバルメニュー */
+.navbar-inverse {
+    background: #00A5B9;
+}
+
+.navbar-inverse a {
+    color: #fff;
+}
+
+/* サイドバーエリア */
+aside ul li {
+
+    list-style: none;
+}
+
+aside ul li a {
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+/* メインエリア */
+table th, table td{
+    text-align: center;
+}
+
+
+/* フッターエリア */
+.fnav {
+    background: #F0F0F0;
+    padding-top: 40px;
+}
+
+#footer {
+    margin-top: 30px;
+    background: #282828;
+    padding: 0 0 30px 0;
+}
+
+small p {
+    color: #fff;
+    text-align: center;
+}
