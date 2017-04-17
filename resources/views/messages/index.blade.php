@@ -1,8 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <h1>メッセージ一覧</h1>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3"><img src="/images/phone_1_pc.png" alt=""></div>
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2"><img src="/images/phone_2_pc.png" alt=""></div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3"><img src="/images/phone_3_pc.png" alt=""></div>
+        </div>
+    </div>
+        
+    <h1>投稿一覧</h1>
 
     @if (count($messages) > 0)
     
@@ -39,7 +47,7 @@
     
     <div class="container" style="padding: 20px 0;">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-4 col-xs-offset-4">
                 <ul	class="pagination">		
                     <li	class="disabled"><a	href="">&laquo;</a></li>	
                     <li	class="active"><a href="">1</a></li>	

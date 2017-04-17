@@ -2,31 +2,20 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-12">
-            {!! Form::model($message, ['route' => 'messages.store']) !!}
-            
-            <div class="form-inline">
-                <div class="form-group">
-                    {!! Form::label('name', 'ハンドルネーム:') !!}
-                    {!! Form::text('name', null, ['class' => 'form-control', 'autofocus' => 'autofocus']) !!}
-                </div>
-                <div class="form-group">
-                    {!! Form::label('password', 'パスワード：') !!}
-                    {!! Form::text('password', null, ['class' => 'form-control']) !!}
-                </div>
-            </div>
-                    
-                <div class="form-group">
-                    {!! Form::label('content', '本文内容') !!}
-                    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
-                </div>
-                
-                {!! Form::submit('投稿', ['class' => 'btn btn-primary']) !!}
-        
-            {!! Form::close() !!}
+    <form method="post" action="messages.store">
+        <div class="form-group">
+            <label for="name">ハンドルネーム：</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="100文字以内" autofocus>
         </div>
-    </div>
-
-
+        <div class="form-group">
+            <label for="password">パスワード：</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="パスワード">
+        </div>
+        <div class="form-group">
+            <label for="content">本文：</label>
+            <input type="textarea" in="content" name="content" class="form-control" pladeholder="255文字以内で入力してください。">
+        </div>
+            <button type="submit" value="送信" class="btn btn-success"></button>
+    </form>
+    
 @endsection

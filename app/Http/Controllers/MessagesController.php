@@ -32,7 +32,7 @@ class MessagesController extends Controller
     {
         $message = new Message();
         
-        return view('messages.create', ['message' => $message]);
+        return view('/', ['content' => $message]);
     }
 
     /**
@@ -43,6 +43,14 @@ class MessagesController extends Controller
      */
     public function store(Request $request)
     {
+        
+        // validation
+        $this->validate($request, [
+                'name' => 'required|max:100',
+                'password' => 'required',
+                'content' => 'required|max:255',
+        ]);
+        
         $message = new Message();
         $message->name = $request->name;
         $message->password = $request->password;

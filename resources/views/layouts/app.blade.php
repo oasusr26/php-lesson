@@ -3,16 +3,21 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="keywords" content="掲示板, 猫飯店, message-board">
-        <meta name="description" content="掲示板＠猫飯店のサイトです！書き込みはどなたでもご自由にどうぞ！！">
-        <meta name="copyright" content="掲示板＠猫飯店">
+        <meta name="keywords" content="掲示板, PHP, mobile, message-board">
+        <meta name="description" content="PhP-mobileのサイトです！書き込みはどなたでもご自由にどうぞ！！">
+        <meta name="copyright" content="PHP-mobile">
         <meta name="author" content="oasusr26">
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>掲示板＠猫飯店</title>
+        <title>PHP-mobile</title>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <!--slick-->
+        <link rel="stylesheet" type="text/css" href="../css/slick.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../css/slick-theme.css" media="screen" />
+        <!--stylesheet-->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- favicon -->
         <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon/favicon.ico">
         <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon/favicon.ico">
         <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
@@ -40,144 +45,36 @@
         <![endif]-->
     </head>
     <body>
-        <div id="header" style="background: skyblue;">@include('commons.navbar')</div>
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        
-        <!-- データ属性でオプション設定 -->
-        <div id="carousel_sample" class="carousel slide" data-interval="200" data-wrap="true">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-          </ol>
-        
-        <!-- Wrapper for slides -->
-          
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="../images/img_mainvisual_lg1.jpg" alt="test_photo1" width="100%">
-                        <div class="carousel-caption">
-                        </div>
-                        </div>
-                        <div class="item">
-                                <img src="../images/img_mainvisual_lg2.jpg" alt="test_photo2" width="100%">
-                            <div class="carousel-caption">
-                            
-                            </div>
-                        </div>
-                        <div class="item">
-                                <img src="../images/img_mainvisual_lg3.jpg" alt="test_photo3" width="100%">
-                            <div class="carousel-caption">
-                                 
-                            </div>
-                        </div>
-                        <div class="item">
-                                <img src="../images/img_mainvisual_lg4.jpg" alt="test_photo4" width="100%">
-                            <div class="carousel-caption">
-                            
-                            </div>
-                        </div>
-                        <div class="item">
-                                <img src="../images/img_mainvisual_lg5.jpg" alt="test_photo4" width="100%">
-                            <div class="carousel-caption">
-                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!--ヘッダーエリア-->
+        <div id="header">
+            @include('commons.navbar')
+            @include('commons.slide')
         </div>
-        
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        
-        <div class="container" style="padding:20px 0">
-            <div class="row">
-                <div class="col-xs-12">
-                    <ul	class="nav nav-tabs" style="margin-bottom:15px;">
-                        <li	class="active"><a href="messages/index.blade.php" data-toggle="tab">一覧ページ</a></li>
-                        <li><a href="../messages/create.blade.php" data-toggle="tab">新規作成</a></li>
-                        <li><a href="../messages/show.blade.php" data-toggle="tab">書き込み詳細</a></li>
-                        <li><a href="../messages/edit.blade.php" data-toggle="tab">編集ページ</a></li>
-                        <li><a href="../messages/delete.blade.php" data-toggle="tab">削除ページ</a></li>
-                    </ul>			
-                </div>
-            </div>
-        </div>
-    
-    <div class="container">
-        <div class="row">    
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="/images/btn_plan_1.jpg" alt="test_image1" class="plan-image" />
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="/images/btn_plan_2.jpg" alt="test_image1" class="plan-image" />
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="/images/btn_plan_3.jpg" alt="test_image1" class="plan-image" />
-            </div>
-        </div>
-    </div>
-    
-    <div class="container top-plan">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <img src="/images/banner_2.jpg" alt="top-banner" class="plan-image" />
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <img src="/images/top_iphone.png" alt="top-iphone" class="plan-image" />
-            </div>
-
-        </div>
-    </div>
-        
+            @include('commons.top_plan')
     
         <div class="container">
             <div class="row">
-                    <!-- main -->
-                <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12">@yield('content')</div>                    
-                    <!-- asaide -->
-                    <div class="container">
-                        <div class="row">
-                            <aside class="col-sm-12 col-md-4 col-lg-4 col-xs-12">
-                                
-                                    <h2>ご利用中のお客様</h2>
-                                    <div class="customer">
-                                        <div class="mypage"><a href="#" target="_self"><img src="/images/mypage_btn.png" alt="mypage" class="mypage-btn" /></a></div>
-                                            <ul class="user">
-                                                <div><li><span style="color: #00A5B9; font-size: 25px;">●</span><a href="#">SIMパッケージをご購入はこちら</a></li></div>
-                                                <div><li><span style="color: #00A5B9; font-size: 25px;">●</span><a href="#">Android／iOS APN設定</a></li></div>
-                                                <div><li><span style="color: #00A5B9; font-size: 25px;">●</span><a href="#">よくある質問(FAQ)</a></li></div>
-                                                <li class="user2"><a href="#">通話プラス／データ専用</a></li>
-                                            </ul>
-                                    </div>
-                                </div>
-                            </aside>
-                    </div>
+                
+                <!--メインエリア -->
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12">
+                    @include('commons.errors_messages')
+                    
+                    @yield('content')
                 </div>
+                
+                 <!--サイドバーエリア-->
+                @include('commons.sidebar')
             </div>
         </div>
-        
+        <!--フッターエリア-->
         <div id="footer">
-            <div class="col-xs-12 fnav">ftrnav</div>        
-            <small><p>Copyright 2017 &copy; 掲示板＠猫飯店. All Rights Reserved.</p></small>
+            @include('commons.footer')
         </div>    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/slick.min.js"></script>
+        <script src="/js/jquery.lazyload.min.js"></script>
+        <script type="text/javascript" src="/js/script.js"></script>
     </body>
 </html>
 
