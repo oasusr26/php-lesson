@@ -251,3 +251,56 @@ small p {
      height: 387px;
 }
 
+/* mainバナー設定 */
+.phone-img {
+    padding-top: 15px;
+}
+
+.phone-img:hover {
+    opacity: 0.5;
+}
+
+.banner1, .banner2 {
+    padding-top: 15px;
+}
+
+.banner1:hover, .banner2:hover {
+    opacity: 0.5;
+}
+
+/*
+pagetopボタンの設定
+*/
+
+/*.pagetop {*/
+/*    display: none;*/
+/*    position: fixed;*/
+/*    bottom: 30px;*/
+/*    right: 15px;*/
+/*}*/
+/*.pagetop a {*/
+/*    display: block;*/
+/*    background-color: #ccc;*/
+/*    text-align: center;*/
+/*    color: #222;*/
+/*    font-size: 12px;*/
+/*    text-decoration: none;*/
+/*    padding: 5px 10px;*/
+/*    filter:alpha(opacity=50);*/
+/*    -moz-opacity: 0.5;*/
+/*    opacity: 0.5;*/
+/*}*/
+/*.pagetop a:hover {*/
+/*    display: block;*/
+/*    background-color: #b2d1fb;*/
+/*    text-align: center;*/
+/*    color: #fff;*/
+/*    font-size: 12px;*/
+/*    text-decoration: none;*/
+/*    padding: 5px 10px;*/
+/*    filter:alpha(opacity=50);*/
+/*    -moz-opacity: 0.5;*/
+/*    opacity: 0.5;*/
+/*}*/
+
+

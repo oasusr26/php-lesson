@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form method="post" action="messages.store">
+    <form method="post" action="index.blade.php">
         <div class="form-group">
             <label for="name">ハンドルネーム：</label>
             <input type="text" id="name" name="name" class="form-control" placeholder="100文字以内" autofocus>
@@ -13,9 +13,9 @@
         </div>
         <div class="form-group">
             <label for="content">本文：</label>
-            <input type="textarea" in="content" name="content" class="form-control" pladeholder="255文字以内で入力してください。">
+            <textarea id="content" name="content" rows="7" class="form-control" placeholder="255文字以内で入力してください。"></textarea>
         </div>
-            <button type="submit" value="送信" class="btn btn-success"></button>
+            <button type="submit" value="投稿" class="btn btn-success">投稿</button>
     </form>
     
 @endsection

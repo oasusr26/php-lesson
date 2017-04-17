@@ -1,14 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3"><img src="/images/phone_1_pc.png" alt=""></div>
-            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2"><img src="/images/phone_2_pc.png" alt=""></div>
-            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3"><img src="/images/phone_3_pc.png" alt=""></div>
-        </div>
-    </div>
         
     <h1>投稿一覧</h1>
 
@@ -31,6 +23,27 @@
     </table>
     @endif
     
+    
+    <!--<form action="create.blade.php" method="post">-->
+    <!--    <div class="form-inline">-->
+    <!--        <div class="form-group">-->
+    <!--            <label for="name">名前：</label>-->
+    <!--            <input type="text" name="name" id="name" placeholder="ハンドルネーム" class="form-control" autofocus>-->
+    <!--        </div>-->
+    <!--        <div class="form-group">-->
+    <!--            <label for="passwod">パスワード：</label>-->
+    <!--            <input type="password" name="passowrd" id="password" placeholder="必須項目" class="form-control">-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="form-group">-->
+    <!--        <label for="content">本文：</label>-->
+    <!--        <textarea name="content" id="content"  rows="10" placeholder="ここに本文を入力してください。（255文字以内）" class="form-control"></textarea>-->
+    <!--    </div>-->
+        <!--<button type="button" class="btn btn-success"><a href="create.blade.php">投稿</a></button>-->
+        {!! link_to_route('messages.create', '新規作成ページへ', null, ['class' => 'btn btn-primary']) !!}
+    <!--</form>-->
+    
+    
     <form method="delete" action="messages/delete.blade.php">
     
         <div class="row">
@@ -42,7 +55,6 @@
             </div>
         </div>
         {!! Form::submit('削除', ['class' => 'btn btn-warning']) !!}
-    
     </form>
     
     <div class="container" style="padding: 20px 0;">

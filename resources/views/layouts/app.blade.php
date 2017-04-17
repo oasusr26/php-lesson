@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="keywords" content="掲示板, PHP, mobile, message-board">
-        <meta name="description" content="PhP-mobileのサイトです！書き込みはどなたでもご自由にどうぞ！！">
+        <meta name="description" content="PHP-mobileのサイトです！書き込みはどなたでもご自由にどうぞ！！">
         <meta name="copyright" content="PHP-mobile">
         <meta name="author" content="oasusr26">
         <meta name="robots" content="noindex, nofollow">
@@ -59,6 +59,7 @@
                 <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12">
                     @include('commons.errors_messages')
                     
+                    @include('commons.commers')
                     @yield('content')
                 </div>
                 

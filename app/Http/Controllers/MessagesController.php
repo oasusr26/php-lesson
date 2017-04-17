@@ -32,7 +32,7 @@ class MessagesController extends Controller
     {
         $message = new Message();
         
-        return view('/', ['content' => $message]);
+        return view('messages.create', ['content' => $message]);
     }
 
     /**
